@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export function TimeTickerFunc04() {
+export function UseEffect04() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export function TimeTickerFunc04() {
 
    return () => {
     //equvalent to componentWillUnmount
-    console.log('TimeDisplay componentDidUnount');
+    console.log('TimeDisplay componentDidUnmount');
    }
 }, []);
 
