@@ -1,21 +1,34 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react';
 
-export function ColorBoxesFunc04() {
-	
-	return (
-    <>
-    <h1>ColorBoxesFunc04</h1>
-	<div className="FlexWrap">
-		<div className="FlexItem Red" >Red box</div>
-		<div className="FlexItem Orange">Orange box</div>
-		<div className="FlexItem Green">Green box</div>
-		<div className="FlexItem Yellow">Yellow box</div>
-		<div className="FlexItem Blue">Blue box</div>
-	  </div>
-    </> 
-	)
+export function ColorBoxesFunc04a() {
+
+	const [clickCount, setClickCount] = useState (0);
+
+
+	//Eventhandler, in func component
+	const onClick = (e) => {
+		console.log(`Func component box clicked: ${e.target.className}`);
+
+		//states, in func component, 
+		//states are readonly, need to use setClickCount() to change the state of text
+		setClickCount(clickCount + 1);
+	}
+    return (
+        <>
+            <h1>ColorBoxesFunc04: nr clicks {clickCount}</h1>
+            <div className="FlexWrap">
+                <div className="FlexItem Red" onClick={onClick}>Red box</div>
+                <div className="FlexItem Orange" onClick={onClick}>Orange box</div>
+                <div className="FlexItem Green" onClick={onClick}>Green box</div>
+                <div className="FlexItem Yellow" onClick={onClick}>Yellow box</div>
+                <div className="FlexItem Blue" onClick={onClick}>Blue box</div>
+            </div>
+        </>
+    );
 }
 
+
+/*
 
 export class ColorBoxesClass04 extends Component {
   render() {

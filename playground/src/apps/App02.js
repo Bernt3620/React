@@ -1,6 +1,8 @@
 import { seedGenerator } from '../services/seido-helpers';
 import Person from '../models/person';
 import Animal from '../models/animal';
+import { Greetings } from '../plays/play1/components/greetings';
+import MyText from '../plays/play1/components/MyText';
 
 //../plays/play02/components
 
@@ -12,6 +14,7 @@ export function App02_01() {
 
   return (
     <>
+    <Greetings name="Hello from App02_01" />
     </>
   );}
 
@@ -19,6 +22,7 @@ export function App02_02() {
 
   return (
     <>
+    <MyText/>
     </>
   );}
 
